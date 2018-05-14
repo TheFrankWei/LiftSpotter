@@ -1,0 +1,42 @@
+<h1>LiftSpotter</h1>
+<head>
+<script>
+function checkform(){
+	if (document.myForm.title.value == "") {
+	     document.getElementById('errors').innerHTML="*Please enter a name for your routine*";
+	     return false;
+	}
+}
+</script>
+</head>
+
+
+
+<body>
+<form name = 'myForm' method="POST" action="/{{user._id}}/add" onsubmit =  "return checkform();" >
+Routine Name: <input type="text" name="title"/>
+<input type="submit" value = 'Add New Routine!'>
+<div id ="errors"> </div>
+</form>
+
+
+
+<form method="POST" action="/{{user._id}}/deleteRoutine">
+
+{{#each routine}}
+
+	<h2> <button type="submit" name='delete' value={{this._id}}>Delete</button> <a href="/{{../user.id}}/{{this.slug}}">{{this.slug}}</a></h2>
+
+{{/each}}
+</form>
+
+
+<form method="POST" action="/{{user._id}}/all">
+	<a href="/{{user._id}}/all">community routines!</a>
+</form>
+
+
+</body>
+
+<a href="/{{user._id}}/accountSettings">settings</a>
+<a href="/logout">logout</a>

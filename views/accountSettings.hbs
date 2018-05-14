@@ -1,0 +1,13 @@
+<h1>Account Settings</h1>
+<p><a href="/{{user.id}}">home</a>.</p>
+
+current visibility: {{user.local.visible}} <ul></ul>
+Change visibility to:
+<form  method="POST" action="/{{user.id}}/accountSettings">
+
+<button type="submit" name="visible" value='private'>Private</button>
+<button type="submit" name="visible" value='public'>Public</button>
+
+</form>
+<ul></ul>
+this will allow your workouts to be visible to others

@@ -1,0 +1,11 @@
+<h1>Community Routines!</h1>
+<p><a href="/{{user}}">home</a>.</p>
+
+{{#each routine}}
+
+	<h2><a href="/{{this.user}}/{{this.slug}}">{{this.slug}}</a></h2>
+
+{{/each}}
+
+
+<a href="/logout">logout</a>

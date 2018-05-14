@@ -1,0 +1,58 @@
+{{#if isUser}}
+<h1>Add Exercises!</h1>
+{{/if}}
+<head>
+<p><a href="/{{user.id}}">home</a>.</p>
+<script>
+function checkform(){
+	if (document.myForm.exercise.value == "" || document.myForm.sets.value == "" || document.myForm.reps.value == ""  ) {
+	     document.getElementById('errors').innerHTML="*Please fill out the entire form*";
+	     return false;
+	}
+}
+</script>
+</head>
+
+{{#if isUser}}
+<body>
+<div>
+<form method="POST" action="/LiftSpotter/{{routine.slug}}/delete" >
+	{{#each routine}}
+    <h2> {{this.slug}}</h2>
+	<div>
+    {{#each this.setList}}
+			<ul><button type="submit" name="delete" value={{this._id}}>Delete</button>
+      Exercise:&nbsp; {{this.Exercise}} &nbsp; &nbsp; Sets:&nbsp; {{this.Sets}} &nbsp; &nbsp; Reps:&nbsp; {{this.Reps}} &nbsp; &nbsp;</ul>
+    {{/each}}
+	</div>
+	{{/each}}
+</form>
+</div>
+
+<form name = "myForm" method="POST" action="/LiftSpotter/{{routine.slug}}" onsubmit= "return checkform();">
+  <ul>
+    Exercise: <input type="text" name="exercise" /> <ul></ul>
+    Sets: <input type="text" name="sets" />
+    Reps: <input type="text" name="reps" /> <ul></ul>
+    <input type="submit" value = 'Add an exercise!'>
+		<div id ="errors"> </div>
+  </ul>
+
+</form>
+</body>
+
+{{else}}
+<body>
+<div>
+	{{#each routine}}
+    <h2> {{this.slug}}</h2>
+	<div>
+    {{#each this.setList}}
+      Exercise:&nbsp; {{this.Exercise}} &nbsp; &nbsp; Sets:&nbsp; {{this.Sets}} &nbsp; &nbsp; Reps:&nbsp; {{this.Reps}} &nbsp; &nbsp;</ul>
+    {{/each}}
+	</div>
+	{{/each}}
+</div>
+
+</body>
+{{/if}}
