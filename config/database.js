@@ -11,6 +11,10 @@ module.exports = {
 // 'url' : 'your-settings-here' // looks like mongodb://<user>:<pass>@mongo.onmodulus.net:27017/Mikha4ot
 };*/
 
+/*
 'url' = 'mongodb://yw1685:mk98qDnx@class-mongodb.cims.nyu.edu/yw1685'
+*/
+
+'url' : 'mongodb://localhost/LiftSpotter'
 }
 
