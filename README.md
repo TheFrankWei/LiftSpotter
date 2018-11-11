@@ -62,5 +62,5 @@ An Example List with Embedded Items:
 * Integrate user authentication
 * Perform client side form validation using a JavaScript library
 
-## [Link to Initial Main Project File](https://github.com/nyu-csci-ua-0480-003-fall-2017/yw1685-final-project/blob/master/src/app.js) 
+## [Link to Initial Main Project File](https://github.com/TheFrankWei/LiftSpotter) 
 
