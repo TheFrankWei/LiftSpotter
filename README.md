@@ -36,9 +36,6 @@ An Example List with Embedded Items:
 }
 ```
 
-
-## [Link to Commented First Draft Schema](https://github.com/nyu-csci-ua-0480-003-fall-2017/yw1685-final-project/blob/master/src/db.js) 
-
 ## Wireframes
 
 [Link to Wireframes](https://balsamiq.cloud/s3ici/puf7b)
@@ -62,16 +59,8 @@ An Example List with Embedded Items:
 
 ## Research Topics
 
-* (5 points) Integrate user authentication
-* (3 points) Perform client side form validation using a JavaScript library
-* (6 points) angular 2
-    * used angular 2 as the frontend framework; it was listed as a 6 in the project description
-
-14 points total out of 8 required points
+* Integrate user authentication
+* Perform client side form validation using a JavaScript library
 
 ## [Link to Initial Main Project File](https://github.com/nyu-csci-ua-0480-003-fall-2017/yw1685-final-project/blob/master/src/app.js) 
 
-## Annotations / References Used
-
-1. [passport.js authentication docs](http://passportjs.org/docs) - (add link to source code that was based on this)
-2. [tutorial on angular](https://www.w3schools.com/angular/) - (add link to source code that was based on this)
